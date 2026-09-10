@@ -23,11 +23,6 @@
   # Flatpak service
   services.flatpak.enable = true;
 
-  services.clamav = {
-    daemon.enable = true;
-    updater.enable = true; # keeps virus definitions updated via freshclam
-  };
-
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
 

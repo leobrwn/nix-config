@@ -2,59 +2,55 @@
 
 {
   environment.systemPackages = with pkgs; [
-    vim
-    wget
-    git
-    go
+    # Gaming and Social
+    discord
     steam
-    fastfetch
-    discord
-    telegram-desktop
-    floorp-bin
-    btop
-    unzip
-    jq
-    python3
-    virt-manager
-    vaults
-    p7zip
-    bazaar
-    shellcheck
-    zed-editor
-    lynis
-    (bleachbit.overrideAttrs (old: {
-      postInstall = (old.postInstall or "") + ''
-        rm -f $out/share/bleachbit/cleaners/snap.xml
-      '';
-    }))
-    gparted
-    nil
-    nixd
-    gopls
-    kdePackages.sddm-kcm
-    vlc
-    qbittorrent
-    btrfs-assistant
-    wine
-    smartmontools
-    xz
-    zstd
-    cava
-    mullvad-browser
-    testdisk-qt
-    vulnix
-    discord
-    obs-studio
-    obsidian
-    gearlever
     heroic
     protonplus
     gamemode
     mangohud
-    clamav
+    # Development / ProLangs
+    vim
+    wget
+    git
+    go
+    python3
+    shellcheck
+    zed-editor
+    gopls
+    nixd
+    nil
+    sqlite
+    gcc
+    jq
     gh
+    obsidian
+    # CLI Tools
+    fastfetch
+    btop
+    cava
+    # Internet
+    telegram-desktop
+    floorp-bin
+    qbittorrent
+    mullvad-browser
+    firefox
+    tor-browser
+    # System
+    unzip
+    bazaar
+    gparted
+    vaults
+    kdePackages.sddm-kcm
+    btrfs-assistant
+    xz
+    zstd
+    testdisk-qt
+    gearlever
+    smartmontools
     rar
-    libreoffice
+    wine
+    # Niri
     swaybg
     jetbrains-mono
     fuzzel
@@ -64,10 +60,20 @@
     mpv
     mpvpaper
     loupe
-    tor-browser
-    clamav
-    sqlite
-    gcc
-    firefox
+    # Security
+    lynis
+    vulnix
+    clamav # Also in services.nix
+    # Multimedia
+    vlc
+    obs-studio
+    libreoffice
+    # Other
+    virt-manager
+    (bleachbit.overrideAttrs (old: {
+      postInstall = (old.postInstall or "") + ''
+        rm -f $out/share/bleachbit/cleaners/snap.xml
+      '';
+    }))
   ];
 }

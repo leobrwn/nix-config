@@ -8,7 +8,6 @@
     go
     steam
     fastfetch
-    vscode
     discord
     telegram-desktop
     floorp-bin
@@ -65,5 +64,10 @@
     mpv
     mpvpaper
     loupe
+    tor-browser
+    clamav
+    sqlite
+    gcc
+    firefox
   ];
 }

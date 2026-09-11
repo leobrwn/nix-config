@@ -9,6 +9,8 @@
     protonplus
     gamemode
     mangohud
+    lutris
+    gamescope
     # Development / ProLangs
     vim
     wget
@@ -29,6 +31,8 @@
     fastfetch
     btop
     cava
+    bat
+    pv
     # Internet
     telegram-desktop
     floorp-bin

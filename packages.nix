@@ -53,7 +53,6 @@
     gearlever
     smartmontools
     rar
-    wine
     # Niri
     swaybg
     jetbrains-mono

@@ -27,6 +27,7 @@
     jq
     gh
     obsidian
+    zip
     # CLI Tools
     fastfetch
     btop

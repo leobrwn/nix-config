@@ -41,9 +41,20 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-  powerManagement.cpuFreqGovernor = "performance";
-
   nix.settings.auto-optimise-store = true;
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 21d";
+  };
+
+  nix.optimise.automatic = true;
+
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   zramSwap.enable = true;
 
@@ -55,9 +66,6 @@
   programs.virt-manager.enable = true;
 
   console.keyMap = "uk";
-
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
 
   virtualisation.podman.enable = true;
 

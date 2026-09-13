@@ -6,5 +6,6 @@
 
   boot.loader.limine.style.wallpapers = [ ./wallpaper.jpg ];
   boot.loader.limine.style.wallpaperStyle = "stretched";
+  boot.loader.limine.maxGenerations = 10;
 
 }

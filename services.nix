@@ -18,10 +18,32 @@
   # updater.enable = true; # freshclam, runs on a timer to keep signatures updated
   # };
 
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "monthly";
+  };
+
+  services.i2pd = {
+    enable = true;
+
+    # Local-only proxies for applications that you explicitly configure to use I2P.
+    proto.httpProxy.enable = true; # http://127.0.0.1:4444
+    proto.socksProxy.enable = true; # socks5://127.0.0.1:4447
+  };
+
   programs.niri.enable = true;
+
+  services.fwupd.enable = true;
 
   # Flatpak service
   services.flatpak.enable = true;
+
+  services.earlyoom.enable = true;
+
+  services.power-profiles-daemon.enable = true;
+
+  hardware.enableRedistributableFirmware = true;
+  hardware.cpu.intel.updateMicrocode = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;

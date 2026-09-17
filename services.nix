@@ -29,6 +29,8 @@
     # Local-only proxies for applications that you explicitly configure to use I2P.
     proto.httpProxy.enable = true; # http://127.0.0.1:4444
     proto.socksProxy.enable = true; # socks5://127.0.0.1:4447
+    proto.http.enable = true;
+    proto.sam.enable = true;
   };
 
   programs.niri.enable = true;

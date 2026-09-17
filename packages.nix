@@ -28,6 +28,8 @@
     gh
     obsidian
     zip
+    wails
+    vscode
     # CLI Tools
     fastfetch
     btop
@@ -39,8 +41,8 @@
     floorp-bin
     qbittorrent
     mullvad-browser
-    firefox
     tor-browser
+    librewolf
     # System
     unzip
     bazaar
@@ -54,16 +56,6 @@
     gearlever
     smartmontools
     rar
-    # Niri
-    swaybg
-    jetbrains-mono
-    fuzzel
-    alacritty
-    xwayland-satellite
-    noctalia-shell
-    mpv
-    mpvpaper
-    loupe
     # Security
     lynis
     vulnix
@@ -74,6 +66,9 @@
     libreoffice
     # Other
     virt-manager
+    lact
+    cpu-x
+    xclicker
     (bleachbit.overrideAttrs (old: {
       postInstall = (old.postInstall or "") + ''
         rm -f $out/share/bleachbit/cleaners/snap.xml

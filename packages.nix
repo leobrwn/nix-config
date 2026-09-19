@@ -60,6 +60,7 @@
     lynis
     vulnix
     clamav # Also in services.nix
+    metadata-cleaner
     # Multimedia
     vlc
     obs-studio
@@ -69,10 +70,5 @@
     lact
     cpu-x
     xclicker
-    (bleachbit.overrideAttrs (old: {
-      postInstall = (old.postInstall or "") + ''
-        rm -f $out/share/bleachbit/cleaners/snap.xml
-      '';
-    }))
   ];
 }
